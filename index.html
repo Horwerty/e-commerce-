@@ -22,6 +22,7 @@
             <a href="#career">Career</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="cartOpening"><i>Cart</i></div>
     </header>
     <main>
         <div class="home" id="home">
@@ -120,50 +121,50 @@
             <div class="order-inner" role="listbox">
                 <div class="order-item active">
                     <img src="https://media.gettyimages.com/photos/burger-with-french-fries-picture-id1211425123?k=20&m=1211425123&s=612x612&w=0&h=OPxoRdpvApEx5CgSJ3C2C1o1G7oX1Idy6yX2BatZKKo=" alt="First slide">
-                    <div id="nameIt" class="nameIt"><h4>BURGER A</h4></div>
-                    <span>$</span><span id="price">7.00</span>
+                    <div id="nameIt" class="nameIt">BURGERA</div>
+                    <span id="price">7.00</span>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing</p>
                     <button id="orderBtn" class="buyBtn">Buy</button> 
                 </div>
                 <div class="order-item">
                     <img src="https://media.gettyimages.com/photos/the-ultimate-cheeseburger-picture-id530744755?k=20&m=530744755&s=612x612&w=0&h=OMgt9VZqoxI7DnIiXoLxqv7zhig-5njo7c-_0AnA0fs=" alt="Second slide">
-                    <div id="nameIt" class="nameIt"><h4>BURGER B</h4></div>
-                    <span>$</span><span id="price2">8.00</span>
+                    <div id="nameIt" class="nameIt">BURGERB</div>
+                    <span id="price">8.00</span>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing</p>
                     <button id="orderBtn" class="buyBtn">Buy</button>
                 </div> 
                 <div class="order-item">
                     <img src="https://media.gettyimages.com/photos/hamburger-with-lettuce-tomato-red-onion-and-french-fries-picture-id200400096-001?k=20&m=200400096-001&s=612x612&w=0&h=k88Out6Hnox89cCdt07zT-djWTPog8Xzt3p3iu-7VpE=" alt="Third slide">
-                    <div class="nameIt"><h4>BURGER C</h4></div>
-                    <span>$</span><span id="price">3.00</span>
+                    <div class="nameIt">BURGERC</div>
+                    <span id="price">3.00</span>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing</p>
                     <button id="orderBtn" class="buyBtn">Buy</button>
                 </div>
                 <div class="order-item">
                     <img src="https://media.gettyimages.com/photos/cheeseburger-closeup-picture-id71248713?k=20&m=71248713&s=612x612&w=0&h=2iBjPnfLR_WpkMHJAsEULimIvhwR7UoHoB_bIEBsSss=" alt="Forth slide">
-                    <div class="nameIt"><h4>BURGER D</h4></div>
-                    <span>$</span><span id="price">7.00</span>
+                    <div class="nameIt">BURGER D</div>
+                    <span id="price">7.00</span>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing</p>
                     <button id="orderBtn" class="buyBtn">Buy</button>
                 </div>
                 <div class="order-item">
                     <img src="https://media.gettyimages.com/photos/simple-meat-burger-isolated-on-white-picture-id157696235?k=20&m=157696235&s=612x612&w=0&h=TPt9k5_wnVo7QE4ZO2T_ERWtkRgurCgZWCrIBNUaxGk=" alt="Fifth slide">
-                    <div class="nameIt"><h4>BURGER E</h4></div>
-                    <span>$</span><span id="price">4.00</span>
+                    <div class="nameIt">BURGER E</div>
+                    <span id="price">4.00</span>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing</p>
                     <button id="orderBtn" class="buyBtn">Buy</button> 
                 </div>
                 <div class="order-item">
                     <img src="https://media.gettyimages.com/photos/classic-cheeseburger-on-a-brioche-bun-with-fries-and-a-milkshake-picture-id1152247466?k=20&m=1152247466&s=612x612&w=0&h=FbP1lwDqVUEtvHLy27CRjbwVWanOxstHCPNAVrYVTeA=" alt="Fifth slide">
-                    <div class="nameIt"><h4>BURGER F</h4></div>
-                    <span>$</span><span id="price">14.00</span>
+                    <div class="nameIt">BURGER F</div>
+                    <span id="price">14.00</span>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing</p>
                     <button id="orderBtn" class="buyBtn">Buy</button> 
                 </div>
                 <div class="order-item">
                     <img src="https://media.gettyimages.com/photos/plain-hamburger-picture-id155352091?k=20&m=155352091&s=612x612&w=0&h=DO2yEZWHr2Aik5IHgqKX7EZebgZctamoMG0Adw7LbwM=" alt="Fifth slide">
-                    <div class="nameIt"><h4>BURGER G</h4></div>
-                    <span>$</span><span id="price">11.00</span>
+                    <div class="nameIt">BURGER G</div>
+                    <span id="price">11.00</span>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing</p>
                     <button id="orderBtn" class="btn buyBtn">Buy</button> 
                 </div>
@@ -171,12 +172,40 @@
                     <div class="cartTicket" id="cartTicket">
                         <h3>CART</h3><i class='bx bxs-cart-add'></i>
                     </div>
-                    <div class="lineOneA">
+                    <thead>
+                        <tr class="tableHead">
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th></th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                        <table class="lineOne">
+                            <!-- <tr>
+                                <td><div class="" id="itemDiv"></div></td>
+                                <td><input type="number" id="inp" value=""></td>
+                                <td>*</td> 
+                                <td><div id="priceDiv"></div></td>
+                                <td><button class="delBtn">Remove</button></td>
+                            </tr> -->
+                            <!-- <tr>
+                                <td>Item Name</td>
+                                <td><Input></Input></td>
+                                <td>Price</td>
+                            </tr>
+                            <tr>
+                                <td>Item Name</td>
+                                <td><Input></Input></td>
+                                <td>Price</td>
+                            </tr> -->
+                        </table>
+                    <!-- <div class="lineOneA">
                         <h4>Item</h4><h4>Quantity</h4><h4>Unit Price</h4>
                     </div>
                     <div class="lineOne">
                          <div class="" id="itemDiv"></div><input type="number" id="inp"> * <div id="priceDiv"></div>
-                    </div>
+                    </div> -->
                     <hr>
                     <div class="lineTwo">
                         <h3>Total =</h3> <div id="totalPrice"></div>

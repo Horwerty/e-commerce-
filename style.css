@@ -153,7 +153,7 @@ aside span {
     padding-left: 0;
 }
 .lineOne {
-    display: flex;
+    display: grid;
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;

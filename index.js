@@ -66,58 +66,55 @@ const swiper = new Swiper('.swiper', {
 // }
 
 let orderItBtns = document.querySelectorAll('.buyBtn');
-const btn = document.getElementsByClassName('order-item');
-let itemName = document.querySelector('#itemDiv h4');
+let itemName = document.querySelector('#itemDiv');
 let itemPrice = document.getElementById('priceDiv');
+let itemCard = document.querySelector('.lineOne');
+let quantee = document.querySelector('#inp');
+let totalMoni = document.querySelector('#totalPrice');
+let remuvs = document.querySelectorAll('.delBtn');
 
-console.log(itemName);
 
+// console.log(itemCard);
 
-
-orderItBtns.forEach((orderItBtn, i ) => {
+orderItBtns.forEach((orderItBtn, i) => {
   orderItBtn.addEventListener('click', addToCart)
 });
 
+remuvs.forEach((remuv, i) => {
+  remuv.addEventListener('click', removeNow)
+});
+
+
 function addToCart() {
+  console.log("added");
   let parent = this.parentElement;
-
   itemName.innerHTML = parent.children[1].innerHTML;
-  itemPrice.innerHTML = parent.children[2].innerHTML;
-
-  console.log(parent.children[1].innerHTML)
-}
+  itemPrice.innerHTML = "$" + parent.children[2].innerHTML;
   
-//   // element.addEventListener('click', () => {
-//   //    let btn_parent = btn.parentElement;
-//   //    let itemName = btn_parent.children[1].innerText;
-//   //    let itemPrice = btn_parent.children[2].innerText;
-//   // });
-
-// );
-
-// for(let i = 0; i < orderIt.length; i++){
-//   orderIt[i] = btn
-//   btn.addEventListener('click', addToCart())  
-// };  
-
-// console.log(btn);
-
-// function addToCart(event){
-//   btn = event.target
-//   let btn_parent = button.parentElement;
-//   itemName.innerText = "Burger A";
-//   itemPrice.innerText = btn_parent.children[0].innerHTML;
-
-//   //console.log(button);
-// };
-
-// for(let i = 0; i < orderIt.length; i++){
-
-//   orderIt[i].addEventListener('click', addToCart());
+  let itemContainer = document.createElement('tr');
+  //console.log(itemName.innerHTML);
+  itemContainer.innerHTML = `<tr>
+  <td><div class="" id="itemDiv">${itemName.innerHTML}</div></td>
+  <td><input type="number" id="inp" value="1"></td>
   
-// };
+  <td><div id="priceDiv">${itemPrice.innerHTML}</div></td>
+  <td><button class = "delBtn">Remove</button></td>
+</tr>`
 
-// function addToCart(event) {
-//   btn = event.target;
-//   
-// }
+itemCard.appendChild(itemContainer);
+
+
+// console.log(itemCard);
+
+};
+
+// console.log(remuvs);
+
+function removeNow() {
+
+  let parent = this.parentElement;
+  parent.parentElement.remove();
+
+};
+
+
